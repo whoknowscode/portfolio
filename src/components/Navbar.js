@@ -42,7 +42,17 @@ function Navbar() {
           </svg>
         </a>
 
-        <button className="btn btn-primary">Send Email</button>
+        <button className="btn btn-primary">
+          {" "}
+          <a
+            href="mailto: luispcode@gmail.com"
+            className="text-white"
+            style={{ textDecoration: "none" }}
+          >
+            {" "}
+            Send Email
+          </a>
+        </button>
       </nav>
     </>
   );

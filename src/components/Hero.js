@@ -10,7 +10,7 @@ function Hero() {
         </div>
         <div
           className="row m-0"
-          style={{ display: "flex", alignItems: "center" }}
+          style={{ display: "flex", alignItems: "center", marginTop: "30px" }}
         >
           <div className="hero-box col-md-6 p-0">
             <div
@@ -203,6 +203,7 @@ function Hero() {
             </div>
             <div>
               <svg
+                className="first"
                 width="200"
                 height="200"
                 viewBox="0 0 289 289"
