@@ -92,6 +92,13 @@ export const data = {
         url: "https://www.mysql.com/",
         color: "#00758F",
       },
+      {
+        name: "Firebase",
+        icon: "",
+        alt: "firebase.svg",
+        url: "https://firebase.google.com/",
+        color: "#fc3F",
+      },
     ],
   },
   projects: [

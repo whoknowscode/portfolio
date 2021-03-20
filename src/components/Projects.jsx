@@ -4,18 +4,10 @@ function Projects() {
   return (
     <React.Fragment>
       <section
+        id="projects"
         style={{ height: "100%" }}
         className="mt-4 projects-animation py-2"
       >
-        <div
-          style={{
-            position: "absolute",
-            height: "100%",
-            minHeight: "max-content",
-            width: "100%",
-          }}
-          id="particles-js"
-        ></div>
         <div className="container-fluid">
           <h1
             style={{ display: "flex", flexDirection: "column" }}

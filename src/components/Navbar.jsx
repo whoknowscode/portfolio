@@ -3,7 +3,7 @@ import React from "react";
 function Navbar() {
   return (
     <>
-      <nav className="navbar py-3">
+      <nav className="navbar  py-3">
         <a className="navbar-brand bold text-light fs-1 " href="#">
           LuisPernia
           <svg
@@ -41,18 +41,29 @@ function Navbar() {
             />
           </svg>
         </a>
-
-        <button className="btn btn-primary">
-          {" "}
-          <a
-            href="mailto: luispcode@gmail.com"
-            className="text-white"
-            style={{ textDecoration: "none" }}
-          >
+        <div className="navbar-custom">
+          <li class="nav-item right ">
+            <a class="btn btn-outline-light " href="#section">
+              Skills
+            </a>
+          </li>
+          <li class="nav-item right" style={{ marginLeft: "1rem" }}>
+            <a class="btn btn-outline-light " href="#projects">
+              Projects
+            </a>
+          </li>
+          <button className="btn btn-primary">
             {" "}
-            Send Email
-          </a>
-        </button>
+            <a
+              href="mailto: luispcode@gmail.com"
+              className="text-white"
+              style={{ textDecoration: "none" }}
+            >
+              {" "}
+              Send Email
+            </a>
+          </button>
+        </div>
       </nav>
     </>
   );

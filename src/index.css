@@ -1,6 +1,7 @@
 body {
   font-family: 'Poppins';
   line-height: 1.6 !important;
+  scroll-behavior: smooth;
 }
 
 .bold {
@@ -24,6 +25,27 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 26px !important;
+}
+
+
+.navbar-custom li {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .navbar-custom li {
+    display: block;
+  }
+
+  .navbar-custom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-custom button {
+    margin-left: 1rem;
+  }
 }
 
 .container-fluid {
@@ -253,7 +275,7 @@ footer .icons div {
 
 
 i:hover {
-  opacity: 80%;
+  color: #5A57FF !important;
 }
 
 .projects .card {
@@ -261,8 +283,10 @@ i:hover {
   margin-top: 1rem;
 }
 
-@media (min-width:) .projects .card:last-child {
-  margin-bottom: 0rem;
+@media (min-width:768px) {
+  .projects .card:last-child {
+    margin-bottom: 0rem;
+  }
 }
 
 .projects-animation {
@@ -279,6 +303,12 @@ i:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+
+
+.projects a {
+  color: #191919;
 }
 
 @media (min-width: 1024px) {

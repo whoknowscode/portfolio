@@ -4,7 +4,7 @@ import { data } from "../data";
 function Skills() {
   return (
     <React.Fragment>
-      <section className="mt-4">
+      <section id="section" className="mt-4">
         <div className="container-fluid skills">
           <h2
             className="bold"
@@ -51,7 +51,8 @@ function Skills() {
           <h3 className="heading2 mt-5" style={{ position: "relative" }}>
             I Build Complex Applications From Scratch{" "}
             <span className="semi-bold" style={{ color: "#5A57FF" }}>
-              To i'll Success
+              {" "}
+              To ill Success{" "}
             </span>
           </h3>
           <p className="heading3">
@@ -199,6 +200,7 @@ function Skills() {
                     return (
                       <li>
                         <a
+                          target="_blank"
                           style={{ borderLeftColor: element.color }}
                           href={element.url}
                         >

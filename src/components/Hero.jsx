@@ -5,6 +5,15 @@ function Hero() {
   return (
     <React.Fragment>
       <section className="hero">
+        <div
+          style={{
+            position: "absolute",
+            height: "100%",
+            minHeight: "max-content",
+            width: "100%",
+          }}
+          id="particles-js"
+        ></div>
         <div className="container-fluid">
           <Navbar />
         </div>
