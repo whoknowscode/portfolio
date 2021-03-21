@@ -76,7 +76,7 @@ function Projects() {
                     <p className="card-text">{project.description}</p>
                     <a
                       target="_blank"
-                      href="#"
+                      href={project.github}
                       style={{ marginRight: "20px" }}
                       className="btn btn-outline-primary"
                     >
