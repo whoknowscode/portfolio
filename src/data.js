@@ -109,45 +109,15 @@ export const data = {
       handled to serve customers`,
       type: "Backend",
       Language: "Nodejs",
-      img: "tickets.jpeg",
+      img: "ticketsApp.png",
       color: "#021BFFe6",
       icon: "",
-      github: "#",
-      url: "#",
+      github: "https://github.com/whoknowscode/tickets-app",
+      url: "https://tasks-app-sockets.herokuapp.com/index.html",
       alt: {
         icon: "heroku.svg",
       },
     },
-    {
-      name: "Pizza Restaurant",
-      description: `Pizza Restaurant Template, You
-      Can see The List of Products,
-      Prices and about, Login and  
-      more`,
-      type: "Frontend",
-      Language: "Reactjs",
-      color: "#FF4F6Ee6",
-      img: "pizza.png",
-      icon: "",
-      github: "#",
-      url: "#",
-      alt: {
-        icon: "heroku.svg",
-      },
-    },
-    {
-      name: "Social Media App",
-      description: `Social Media Template designed
-      with Figma, you can see posts,
-      messages, notifications and all
-      the related`,
-      type: "Design",
-      Language: "UI/UX",
-      color: "#40FF75e6",
-      url: "#",
-      img: "social.jpg",
-      github: "#",
-      icon: "bi bi-cup-straw",
-    },
+    
   ],
 };

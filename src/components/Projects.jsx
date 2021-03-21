@@ -75,13 +75,18 @@ function Projects() {
                     <h5 className="card-title semi-bold">{project.name}</h5>
                     <p className="card-text">{project.description}</p>
                     <a
+                      target="_blank"
                       href="#"
                       style={{ marginRight: "20px" }}
                       className="btn btn-outline-primary"
                     >
                       <i class="bi bi-github"></i> Github
                     </a>
-                    <a href={project.url} className="btn btn-outline-primary">
+                    <a
+                      target="_blank"
+                      href={project.url}
+                      className="btn btn-outline-primary"
+                    >
                       {project.icon ? (
                         <i
                           style={{ fontSize: "16px" }}

@@ -43,7 +43,13 @@ function Hero() {
                 UI/UX
               </p>
               <button className="btn btn-md btn-outline-primary mt-4 ">
-                See My Work
+                <a
+                  className="text-white fw-bold"
+                  style={{ textDecoration: "none" }}
+                  href="#projects"
+                >
+                  See My Work
+                </a>
               </button>
             </div>
           </div>
