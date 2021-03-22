@@ -80,7 +80,7 @@ function Skills() {
               <h3 className="heading2 mt-4">
                 For{" "}
                 <span className="semi-bold" style={{ color: "#5A57FF" }}>
-                  Design
+                  Utilities
                 </span>
               </h3>
               <div className="skills-list">

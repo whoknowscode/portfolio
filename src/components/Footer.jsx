@@ -8,7 +8,7 @@ function Footer() {
           <div className="icons container-fluid">
             <div>
               {" "}
-              <a href="#">
+              <a href="https://www.facebook.com/theluispxd/">
                 {" "}
                 <i class="fab fa-facebook fs-4 text-white mx-3 "></i>
               </a>
@@ -18,7 +18,7 @@ function Footer() {
               <a href="#">
                 <i class="fab fa-linkedin-in fs-4 text-white mx-3"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/whoknowscode">
                 <i class="fab fa-github fs-4 text-white mx-3"></i>
               </a>
             </div>

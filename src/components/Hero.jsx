@@ -33,7 +33,7 @@ function Hero() {
                 Experiences With High Perfomance
               </h1>
               <h3 className="heading2 text-light regular mt-4">
-                <span className="bold">Fullstack</span> Web Developer
+                <span className="bold">Web Developer</span> Junior
               </h3>
               <p className="heading3 opacity-dark mt-4">
                 Database <span className="semi-bold text-light">\</span>{" "}
