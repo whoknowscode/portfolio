@@ -8,8 +8,8 @@ function Index() {
   return (
     <>
       <Hero />
-      <Skills />
       <Projects />
+      <Skills />
       <Footer />
     </>
   );

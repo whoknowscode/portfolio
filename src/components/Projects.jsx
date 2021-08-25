@@ -1,17 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
-import { data } from "../data";
+import React from "react";
 function Projects() {
   return (
     <React.Fragment>
       <section
         id="projects"
         style={{ height: "100%" }}
-        className="mt-4 projects-animation py-2"
+        className="projects-animation pt-2"
       >
         <div className="container-fluid">
           <h1
             style={{ display: "flex", flexDirection: "column" }}
-            className="p-0 mb-5 mt-3 heading1 bold text-white"
+            className="p-0 mb-4 mt-3 heading1 bold text-white"
           >
             My Projects
             <svg
@@ -49,64 +48,45 @@ function Projects() {
               />
             </svg>
           </h1>
-
-          <div className="projects">
-            {data.projects.map((project, index) => {
-              return (
-                <article className="project card">
-                  <div className="before-card">
-                    <div className="block"></div>
-                    <div
-                      style={{ backgroundColor: project.color }}
-                      className="text p-1"
-                    >
-                      <h2 className="heading2 m-0 text-white bold ">
-                        {project.type}{" "}
-                        <span className="opacity">{project.Language}</span>
-                      </h2>
-                    </div>
+        </div>
+        <div className="projects">
+          <div className="project">
+            <div className="pigeon-body">
+              <div className="pigeon-title">
+                <h1><span>Pigeon</span> Messenger</h1>
+                <p className="pigeon-small">Realtime web chat application</p>
+              </div>
+              <div className="pigeon-opts">
+                <p><i className="bi bi-diamond-fill"></i> Features</p>
+                <div className="pigeon-icons">
+                  <div className="icon-group">
+                      <p><i className="bi bi-cloud-upload-fill"></i> Upload Images</p>
+                      <p><i className="bi bi-person-plus-fill"></i> Add Contacts</p>
+                      <p><i className="bi bi-layout-wtf"></i> State management</p>
                   </div>
-                  <img
-                    src={`assets/projects/${project.img}`}
-                    class="card-img-top"
-                    alt={project.name}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title semi-bold">{project.name}</h5>
-                    <p className="card-text">{project.description}</p>
-                    <a
-                      target="_blank"
-                      href={project.github}
-                      style={{ marginRight: "20px" }}
-                      className="btn btn-outline-primary"
-                    >
-                      <i class="bi bi-github"></i> Github
-                    </a>
-                    <a
-                      target="_blank"
-                      href={project.url}
-                      className="btn btn-outline-primary"
-                    >
-                      {project.icon ? (
-                        <i
-                          style={{ fontSize: "16px" }}
-                          className={project.icon}
-                        ></i>
-                      ) : (
-                        <img
-                          width="20px"
-                          src={`assets/icons/${project.alt.icon}`}
-                          alt="..."
-                        />
-                      )}{" "}
-                      Online
-                    </a>
+                  <div className="icon-group">
+                      <p><i className="bi bi-collection-fill"></i> Create Rooms</p>
+                      <p><i className="bi bi-bell-fill"></i> In-app notifications</p>
+                      <p><i className="bi bi-google"></i> Google Authentication</p>
                   </div>
-                </article>
-              );
-            })}
+                </div>
+                <div className="pigeon-buttons">
+                  <a target="_blank" rel="noreferrer" className="pigeon-button" href="https://pigeon-messenger.netlify.app/register"><i className="bi bi-broadcast-pin"></i> Web</a>
+                  <a target="_blank" rel="noreferrer" className="pigeon-button" href="https://github.com/whoknowscode/pigeon-messenger"><i className="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+            <div className="displays">
+                <div className="mobile">
+                    <img src="/assets/projects/mobiles.gif" alt="" />
+                </div>
+                <div className="desktop">
+                <img src="/assets/projects/desktops.gif" alt="" />
+                </div>
+            </div>
           </div>
         </div>
+
       </section>
     </React.Fragment>
   );

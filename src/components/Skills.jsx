@@ -4,7 +4,7 @@ import { data } from "../data";
 function Skills() {
   return (
     <React.Fragment>
-      <section id="section" className="mt-4">
+      <section id="section" className="skills-container">
         <div className="container-fluid skills">
           <h2
             className="bold"
@@ -91,6 +91,7 @@ function Skills() {
                         <li>
                           <a
                             target="_blank"
+                            rel="noreferrer"
                             style={{ borderLeftColor: element.color }}
                             href={element.url}
                           >
@@ -107,6 +108,7 @@ function Skills() {
                       <li>
                         <a
                           target="_blank"
+                          rel="noreferrer"
                           style={{ borderLeftColor: element.color }}
                           href={element.url}
                         >
@@ -138,6 +140,7 @@ function Skills() {
                         <li>
                           <a
                             target="_blank"
+                            rel="noreferrer"
                             style={{ borderLeftColor: element.color }}
                             href={element.url}
                           >
@@ -154,6 +157,7 @@ function Skills() {
                       <li>
                         <a
                           target="_blank"
+                          rel="noreferrer"
                           style={{ borderLeftColor: element.color }}
                           href={element.url}
                         >
@@ -185,6 +189,7 @@ function Skills() {
                         <li>
                           <a
                             target="_blank"
+                            rel="noreferrer"
                             style={{ borderLeftColor: element.color }}
                             href={element.url}
                           >
@@ -201,6 +206,7 @@ function Skills() {
                       <li>
                         <a
                           target="_blank"
+                          rel="noreferrer"
                           style={{ borderLeftColor: element.color }}
                           href={element.url}
                         >

@@ -10,16 +10,10 @@ function Footer() {
               {" "}
               <a href="https://www.facebook.com/theluispxd/">
                 {" "}
-                <i class="fab fa-facebook fs-4 text-white mx-3 "></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-twitter fs-4 text-white mx-3"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-linkedin-in fs-4 text-white mx-3"></i>
+                <i className="fab fa-facebook fs-4 text-white mx-3 "></i>
               </a>
               <a href="https://github.com/whoknowscode">
-                <i class="fab fa-github fs-4 text-white mx-3"></i>
+                <i className="fab fa-github fs-4 text-white mx-3"></i>
               </a>
             </div>
             <p className="m-0 heading3 bold">

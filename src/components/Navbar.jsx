@@ -4,8 +4,9 @@ function Navbar() {
   return (
     <>
       <nav className="navbar  py-3">
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a className="navbar-brand bold text-light fs-1 " href="#">
-          LuisPernia
+          Luis Pernia
           <svg
             width="134"
             height="24"
@@ -42,13 +43,13 @@ function Navbar() {
           </svg>
         </a>
         <div className="navbar-custom">
-          <li class="nav-item right ">
-            <a class="btn btn-outline-light " href="#section">
+          <li className="nav-item right ">
+            <a className="btn btn-outline-light " href="#section">
               Skills
             </a>
           </li>
-          <li class="nav-item right" style={{ marginLeft: "1rem" }}>
-            <a class="btn btn-outline-light " href="#projects">
+          <li className="nav-item right" style={{ marginLeft: "1rem" }}>
+            <a className="btn btn-outline-light " href="#projects">
               Projects
             </a>
           </li>

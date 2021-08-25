@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "./Navbar";
+import ParticlesComp from "./Particles";
+import {useSpring, animated} from "react-spring"
 
 function Hero() {
+  
+  const heroRef = useRef();
+  const [state, setState] = useState(0);
+  const spring = useSpring({to: {opacity: 1}, from: {opacity: 0}, delay: 500});
+  const titleSpring = useSpring({to: {opacity: 1, transform: "translate(0rem, 0rem)"}, from: {opacity: 0, transform: "translate(-2rem, 0rem)"}})
+
+  useEffect(() => {
+      setState(heroRef.current.clientHeight)
+  }, [heroRef])
+
+
   return (
     <React.Fragment>
-      <section className="hero">
-        <div
-          style={{
-            position: "absolute",
-            height: "100%",
-            minHeight: "max-content",
-            width: "100%",
-          }}
-          id="particles-js"
-        ></div>
+      <section ref={heroRef} className="hero">
+        <ParticlesComp height={state} />
         <div className="container-fluid">
           <Navbar />
         </div>
@@ -22,9 +27,9 @@ function Hero() {
           style={{ display: "flex", alignItems: "center", marginTop: "30px" }}
         >
           <div className="hero-box col-md-6 p-0">
-            <div
+            <animated.div
               className="py-5 container-fluid"
-              style={{ position: "relative" }}
+              style={{ position: "relative", ...titleSpring }}
             >
               <h1 className="heading1 text-light bold mb-0">
                 <span className="back">
@@ -51,11 +56,12 @@ function Hero() {
                   See My Work
                 </a>
               </button>
-            </div>
+            </animated.div>
           </div>
           <div className="col-md-6 icons">
             <div>
-              <svg
+              <animated.svg
+              style={spring}
                 width="100"
                 height="100"
                 viewBox="0 0 131 114"
@@ -91,12 +97,12 @@ function Hero() {
                 <path
                   d="M48.8668 22.4269C50.0102 22.4269 50.9371 21.5052 50.9371 20.3681C50.9371 19.2311 50.0102 18.3093 48.8668 18.3093C47.7233 18.3093 46.7964 19.2311 46.7964 20.3681C46.7964 21.5052 47.7233 22.4269 48.8668 22.4269Z"
                   fill="#FF577F"
-                  fill-opacity="0.85"
+                  fillOpacity="0.85"
                 />
                 <path
                   d="M57.1483 22.4269C58.2918 22.4269 59.2187 21.5052 59.2187 20.3681C59.2187 19.2311 58.2918 18.3093 57.1483 18.3093C56.0049 18.3093 55.0779 19.2311 55.0779 20.3681C55.0779 21.5052 56.0049 22.4269 57.1483 22.4269Z"
                   fill="#FF577F"
-                  fill-opacity="0.65"
+                  fillOpacity="0.65"
                 />
                 <path
                   d="M77.8521 22.4269H90.2744C91.4178 22.4269 92.3448 21.5051 92.3448 20.3681C92.3448 19.2311 91.4178 18.3093 90.2744 18.3093H77.8521C76.7087 18.3093 75.7817 19.2311 75.7817 20.3681C75.7817 21.5051 76.7087 22.4269 77.8521 22.4269Z"
@@ -110,9 +116,9 @@ function Hero() {
                     width="96.5641"
                     height="112.942"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -143,9 +149,9 @@ function Hero() {
                     width="94.4922"
                     height="100.588"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -176,9 +182,9 @@ function Hero() {
                     width="94.4922"
                     height="100.588"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -210,16 +216,17 @@ function Hero() {
                     y2="84.3734"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#5A57FF" />
-                    <stop offset="1" stop-color="#5A57FF" stop-opacity="0" />
+                    <stop stopColor="#5A57FF" />
+                    <stop offset="1" stopColor="#5A57FF" stopOpacity="0" />
                   </linearGradient>
                 </defs>
-              </svg>
+              </animated.svg>
             </div>
             <div>
-              <svg
+              <animated.svg
                 className="first"
                 width="200"
+                style={spring}
                 height="200"
                 viewBox="0 0 289 289"
                 fill="none"
@@ -228,12 +235,12 @@ function Hero() {
                 <path
                   d="M126.265 288.416C122.953 288.416 120.265 285.728 120.265 282.416V234.416C120.265 231.104 122.953 228.416 126.265 228.416C129.577 228.416 132.265 231.104 132.265 234.416V282.416C132.265 285.728 129.577 288.416 126.265 288.416Z"
                   fill="#5A57FF"
-                  fill-opacity="0.62"
+                  fillOpacity="0.62"
                 />
                 <path
                   d="M162.265 288.416C158.953 288.416 156.265 285.728 156.265 282.416V234.416C156.265 231.104 158.953 228.416 162.265 228.416C165.577 228.416 168.265 231.104 168.265 234.416V282.416C168.265 285.728 165.577 288.416 162.265 288.416Z"
                   fill="#5A57FF"
-                  fill-opacity="0.62"
+                  fillOpacity="0.62"
                 />
                 <path
                   d="M198.265 288.416H90.2654C86.9534 288.416 84.2654 285.728 84.2654 282.416C84.2654 279.104 86.9534 276.416 90.2654 276.416H198.265C201.577 276.416 204.265 279.104 204.265 282.416C204.265 285.728 201.577 288.416 198.265 288.416Z"
@@ -256,9 +263,10 @@ function Hero() {
                   fill="url(#paint3_linear)"
                 />
                 <g
-                  filter="drop-shadow(0px 4px 30px white)"
+                  filter={`drop-shadow(0px 4px 30px white)`}
                   style={{ transition: ".3 all ease-in-out" }}
                 >
+                  <animate />
                   <path
                     d="M72.2654 180.416C70.6934 180.416 69.1574 179.804 68.0174 178.664C66.4574 177.104 65.8814 174.812 66.5174 172.7C68.4974 166.076 78.7814 132.644 86.8454 124.58C96.5774 114.86 112.369 114.86 122.101 124.58C131.821 134.3 131.809 150.116 122.101 159.836C114.037 167.888 80.6054 178.196 73.9814 180.176C73.4294 180.332 72.8414 180.416 72.2654 180.416ZM104.485 129.284C101.185 129.284 97.8614 130.532 95.3414 133.052C91.9454 136.46 86.0654 151.496 81.4934 165.188C95.1974 160.604 110.233 154.748 113.629 151.34C118.657 146.3 118.657 138.092 113.629 133.064C111.097 130.544 107.797 129.284 104.485 129.284ZM117.865 155.588H117.985H117.865Z"
                     fill="#DBFF4D"
@@ -272,9 +280,9 @@ function Hero() {
                     width="143.124"
                     height="143.126"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -306,8 +314,8 @@ function Hero() {
                     y2="240.416"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#5A57FF" />
-                    <stop offset="1" stop-color="#5A57FF" stop-opacity="0" />
+                    <stop stopColor="#5A57FF" />
+                    <stop offset="1" stopColor="#5A57FF" stopOpacity="0" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_linear"
@@ -317,10 +325,10 @@ function Hero() {
                     y2="142.472"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#5A57FF" />
-                    <stop offset="0.0001" stop-color="#5A57FF" />
-                    <stop offset="1" stop-color="#5A57FF" stop-opacity="0.3" />
-                    <stop offset="1" stop-color="#5A57FF" stop-opacity="0.3" />
+                    <stop stopColor="#5A57FF" />
+                    <stop offset="0.0001" stopColor="#5A57FF" />
+                    <stop offset="1" stopColor="#5A57FF" stopOpacity="0.3" />
+                    <stop offset="1" stopColor="#5A57FF" stopOpacity="0.3" />
                   </linearGradient>
                   <linearGradient
                     id="paint2_linear"
@@ -330,8 +338,8 @@ function Hero() {
                     y2="170.936"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#FF577F" />
-                    <stop offset="1" stop-color="#FF577F" stop-opacity="0" />
+                    <stop stopColor="#FF577F" />
+                    <stop offset="1" stopColor="#FF577F" stopOpacity="0" />
                   </linearGradient>
                   <linearGradient
                     id="paint3_linear"
@@ -341,11 +349,11 @@ function Hero() {
                     y2="91.6516"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#FF577F" />
-                    <stop offset="1" stop-color="#FF577F" stop-opacity="0" />
+                    <stop stopColor="#FF577F" />
+                    <stop offset="1" stopColor="#FF577F" stopOpacity="0" />
                   </linearGradient>
                 </defs>
-              </svg>
+              </animated.svg>
             </div>
           </div>
         </div>
